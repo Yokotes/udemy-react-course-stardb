@@ -1,0 +1,11 @@
+.item-list {
+  margin-top: 25px;
+}
+
+.item-list .list-group-item {
+  font-size: 1rem;
+}
+
+.item-list .list-group-item:hover {
+  background-color: #444;
+}

@@ -1,0 +1,27 @@
+.item-details {
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  padding: 15px;
+}
+
+.item-details-img-container {
+  margin-right: 30px;
+  width: 45%;
+}
+
+.item-details-img {
+  width: 100%;
+}
+
+.item-details-name {
+  margin-bottom: 20px;
+}
+
+.item-details-list .list-group-item {
+  font-size: 1rem;
+}
+
+.item-details-list .list-group-item .term {
+  margin-right: 10px;
+}
