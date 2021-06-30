@@ -14,12 +14,12 @@ export default class ItemDetails extends Component {
 
   // Lyfecicle methods
   componentDidMount() {
-    this.updatePerson();
+    this.updateItem();
   }
 
   componentDidUpdate(prevProps) {
-    if (this.props.id !== prevProps.id) {
-      this.updatePerson();
+    if (this.props.itemId !== prevProps.itemId) {
+      this.updateItem();
     }
   }
 
@@ -32,18 +32,18 @@ export default class ItemDetails extends Component {
     })
   }
 
-  // Update person function
-  updatePerson = () => {
-    const {id, getData} = this.props
+  // Update item function
+  updateItem = () => {
+    const {itemId, getData} = this.props
 
-    if (!id)
+    if (!itemId)
       return;
 
     this.setState({
       loading: true
     })
 
-    getData(id)
+    getData(itemId)
     .then(this.onItemLoaded)
   }
 

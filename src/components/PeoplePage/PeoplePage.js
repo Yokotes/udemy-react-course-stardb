@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import ErrorBoundry from '../ErrorBoundry/ErrorBoundry'
 import Row from '../Row/Row'
 import { PersonList } from '../SWComponents/lists'
-import { PersonDetails } from '../SWComponents/details'
+import PersonDetails from '../SWComponents/PersonDetails'
 
 export default class PeoplePage extends Component {
 
@@ -13,6 +13,7 @@ export default class PeoplePage extends Component {
 
   // onPersonSelected function
   onPersonSelected = (id) => {
+    console.log(id)
     this.setState({
       selectedPerson: id
     })
@@ -26,7 +27,7 @@ export default class PeoplePage extends Component {
           left={
             <PersonList
               onItemSelected={this.onPersonSelected}
-              renderItem={({name, gender, birthYear}) => `${name} (${gender}), ${birthYear}`}
+              renderItem={({name, id}) => `${name} (${id})`}
             />
           }
           right={
